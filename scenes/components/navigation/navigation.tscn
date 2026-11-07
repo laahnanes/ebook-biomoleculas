@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dd4eu1ebgu8ba"]
+
+[ext_resource type="Script" uid="uid://ff02qhg4rt6k" path="res://scripts/navigation.gd" id="1_rjri2"]
+[ext_resource type="Texture2D" uid="uid://clf113xs8luj8" path="res://assets/navigation_buttons/BtnAnterior.png" id="2_7xwrr"]
+[ext_resource type="Texture2D" uid="uid://cnphdmcm3gsc3" path="res://assets/navigation_buttons/BtnDesligarSom.png" id="3_0hsoo"]
+[ext_resource type="Texture2D" uid="uid://c7yvx8spei071" path="res://assets/navigation_buttons/BtnLigarSom.png" id="4_x7l7x"]
+[ext_resource type="Texture2D" uid="uid://buhtkwqmxh4se" path="res://assets/navigation_buttons/BtnProximo.png" id="5_v03s2"]
+[ext_resource type="Texture2D" uid="uid://bal6ed6qk4thy" path="res://assets/navigation_buttons/BtnInicio.png" id="6_uj2lq"]
+
+[node name="Navigation" type="Control" unique_id=1300792456]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_rjri2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=480775456]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -432.5
+offset_top = -70.0
+offset_right = 432.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="BtnAnterior" type="TextureButton" parent="HBoxContainer" unique_id=966027825]
+layout_mode = 2
+texture_normal = ExtResource("2_7xwrr")
+
+[node name="BtnAudio" type="TextureButton" parent="HBoxContainer" unique_id=1319176213]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("3_0hsoo")
+texture_pressed = ExtResource("4_x7l7x")
+
+[node name="BtnProximo" type="TextureButton" parent="HBoxContainer" unique_id=987239470]
+layout_mode = 2
+texture_normal = ExtResource("5_v03s2")
+
+[node name="BtnInicio" type="TextureButton" parent="HBoxContainer" unique_id=1143772376]
+layout_mode = 2
+texture_normal = ExtResource("6_uj2lq")

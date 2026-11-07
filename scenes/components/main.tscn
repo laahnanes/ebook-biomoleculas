@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dputqlpudr0vu"]
+
+[ext_resource type="Script" uid="uid://d0j27pkatp5vu" path="res://scripts/main.gd" id="1_csr3f"]
+[ext_resource type="PackedScene" uid="uid://dd4eu1ebgu8ba" path="res://scenes/components/navigation/navigation.tscn" id="1_vqnuc"]
+
+[node name="Main" type="Control" unique_id=1551237555]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_csr3f")
+
+[node name="Pages" type="Control" parent="." unique_id=301551540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Navigation" parent="." unique_id=1300792456 instance=ExtResource("1_vqnuc")]
+layout_mode = 1
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." unique_id=1657706525]
