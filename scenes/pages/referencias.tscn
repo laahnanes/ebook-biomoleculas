@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dhpwh0auokbam"]
 
+[ext_resource type="Texture2D" uid="uid://4luokh80ydng" path="res://assets/backgrounds/Referencias.png" id="1_hj1jq"]
+
 [node name="Referencias" type="Control" unique_id=1813498713]
 layout_mode = 3
 anchors_preset = 15
@@ -8,11 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=644932885]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.97121626, 0.68687624, 0.7388256, 1)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=570423692]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_hj1jq")

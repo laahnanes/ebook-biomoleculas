@@ -19,9 +19,15 @@ func _ready():
 
 
 func configurar_pagina(pagina_atual: int, total_paginas: int):
-	btn_anterior.visible = pagina_atual > 0
-	btn_proxima.visible = pagina_atual < total_paginas - 1
-	btn_inicio.visible = pagina_atual == total_paginas - 1
+	var primeira := pagina_atual == 0
+	var ultima := pagina_atual == total_paginas - 1
+	# O Anterior fica invisível, mas continua ocupando o lugar dele.
+	# Assim os outros botões não mudam de posição de uma página para a outra.
+	btn_anterior.modulate.a = 0.0 if primeira else 1.0
+	btn_anterior.disabled = primeira
+	# Próximo e Voltar ao início dividem o mesmo espaço (SlotDireita).
+	btn_proxima.visible = not ultima
+	btn_inicio.visible = ultima
 
 
 func _on_btn_anterior_pressed():

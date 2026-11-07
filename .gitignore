@@ -1,3 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Exportações e chaves (nunca subir)
+*.apk
+*.aab
+*.idsig
+*.keystore
+*.jks
+export_credentials.cfg
