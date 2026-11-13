@@ -37,18 +37,22 @@ theme_override_constants/separation = 16
 
 [node name="BtnAnterior" type="TextureButton" parent="HBoxContainer" unique_id=966027825]
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("2_7xwrr")
 
 [node name="BtnAudio" type="TextureButton" parent="HBoxContainer" unique_id=1319176213]
 layout_mode = 2
+focus_mode = 0
 toggle_mode = true
 texture_normal = ExtResource("3_0hsoo")
 texture_pressed = ExtResource("4_x7l7x")
 
 [node name="BtnProximo" type="TextureButton" parent="HBoxContainer" unique_id=987239470]
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("5_v03s2")
 
 [node name="BtnInicio" type="TextureButton" parent="HBoxContainer" unique_id=1143772376]
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("6_uj2lq")

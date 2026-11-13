@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://daun7lwlscxkg"]
+
+[ext_resource type="Texture2D" uid="uid://bue0taweeu6o4" path="res://assets/backgrounds/Pagina2.png" id="1_itauu"]
+
+[node name="Pagina2" type="Control" unique_id=1114614824]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1544902839]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_itauu")

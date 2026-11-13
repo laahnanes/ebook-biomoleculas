@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://d2ofywla0rmtn"]
 
+[ext_resource type="Texture2D" uid="uid://d2na2do6wtnun" path="res://assets/backgrounds/Pagina5.png" id="1_gihnl"]
+[ext_resource type="Script" uid="uid://cvt75r11rhqea" path="res://scripts/pagina_5.gd" id="1_op0f7"]
+[ext_resource type="Texture2D" uid="uid://3w48c0db8p6r" path="res://assets/page5/dna_aberto.svg" id="2_cu1y4"]
+[ext_resource type="Texture2D" uid="uid://b2drnbjhungl2" path="res://assets/page5/dna_fechado.svg" id="3_8itfj"]
+[ext_resource type="Script" uid="uid://c8g7l6jl3320q" path="res://scripts/helicase.gd" id="4_8itfj"]
+[ext_resource type="Texture2D" uid="uid://cojlogkb5uq8o" path="res://assets/page5/helicase.svg" id="4_op0f7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfa0o"]
+radius = 56.88585
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_k80x8"]
+
 [node name="Pagina5" type="Control" unique_id=1813498713]
 layout_mode = 3
 anchors_preset = 15
@@ -7,12 +19,75 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_op0f7")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=644932885]
+[node name="Background" type="TextureRect" parent="." unique_id=235517405]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.28925878, 0.9114332, 0.51663744, 1)
+mouse_filter = 2
+texture = ExtResource("1_gihnl")
+
+[node name="DNA" type="Control" parent="." unique_id=1858031900]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 264.0
+offset_top = 380.0
+offset_right = 504.0
+offset_bottom = 860.0
+mouse_filter = 2
+
+[node name="Aberto" type="Control" parent="DNA" unique_id=434119284]
+unique_name_in_owner = true
+clip_contents = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="AbertoImg" type="TextureRect" parent="DNA/Aberto" unique_id=683488350]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cu1y4")
+
+[node name="Fechado" type="Control" parent="DNA" unique_id=119123906]
+unique_name_in_owner = true
+clip_contents = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="FechadoImg" type="TextureRect" parent="DNA/Fechado" unique_id=746554374]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_8itfj")
+
+[node name="Helicase" type="RigidBody2D" parent="." unique_id=642253083]
+unique_name_in_owner = true
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 4.0
+script = ExtResource("4_8itfj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Helicase" unique_id=585178593]
+position = Vector2(-3.8146973e-06, 4)
+scale = Vector2(0.9032258, 1.0769231)
+texture = ExtResource("4_op0f7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Helicase" unique_id=188183361]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_gfa0o")
+
+[node name="Microfone" type="AudioStreamPlayer" parent="." unique_id=2146931202]
+stream = SubResource("AudioStreamMicrophone_k80x8")
+autoplay = true
+bus = &"Mic"
